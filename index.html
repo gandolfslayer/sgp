@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGP: Stop the Silence. Start the Revolution.</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for the "Inter" font and custom colors -->
-    <script>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for the "Inter" font and custom colors --><script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -65,8 +63,7 @@
 </head>
 <body class="bg-sgp-dark text-white font-sans min-h-screen antialiased">
 
-    <!-- Navigation Bar (Consistent across all pages) -->
-    <header class="sticky top-0 z-10 bg-sgp-dark/95 backdrop-blur-sm p-4 border-b border-sgp-dark/50 shadow-lg">
+    <!-- Navigation Bar (Consistent across all pages) --><header class="sticky top-0 z-10 bg-sgp-dark/95 backdrop-blur-sm p-4 border-b border-sgp-dark/50 shadow-lg">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black gradient-text">SGP.</a>
             <nav class="hidden md:flex space-x-6 text-sm font-semibold">
@@ -75,8 +72,7 @@
                 <a href="act-now.html" class="hover:text-sgp-primary transition duration-300">ACT NOW</a>
             </nav>
             <button class="md:hidden text-2xl hover:text-sgp-primary">
-                <!-- Hamburger Icon SVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <!-- Hamburger Icon SVG --><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -84,34 +80,37 @@
     </header>
 
     <main>
-        <!-- 1. Hero Section - Clickbait/Emotionally Appealing -->
-        <section id="hero" class="relative text-center py-20 md:py-32 overflow-hidden">
+        <!-- 1. Hero Section - Clickbait/Emotionally Appealing --><section id="hero" class="relative text-center py-20 md:py-32 overflow-hidden">
             <div class="absolute inset-0 bg-sgp-dark opacity-90"></div>
             <div class="max-w-4xl mx-auto px-6 relative z-10">
                 <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight uppercase">
                     THE WAR ON IDENTITY STOPS <span class="gradient-text">HERE.</span>
                 </h2>
                 <p class="text-xl md:text-2xl text-slate-300 mb-10 font-medium max-w-2xl mx-auto">
-                    They want us silenced. We are the **Society of Gender Professionals**, and we are ready to fight back—with legal power, unified expertise, and a revolutionary spirit.
+                    They want us silenced. We are the <span class="font-bold">Society of Gender Professionals</span>, and we are ready to fight back—with legal power, unified expertise, and a revolutionary spirit.
                 </p>
-                <a href="act-now.html" class="cta-button inline-block text-lg md:text-xl font-bold px-10 py-4 rounded-full bg-sgp-primary text-sgp-dark uppercase tracking-wider">
+                <!-- This button links to the primary action page (act-now.html) --><a href="act-now.html" class="cta-button inline-block text-lg md:text-xl font-bold px-10 py-4 rounded-full bg-sgp-primary text-sgp-dark uppercase tracking-wider">
                     FIGHT FOR EQUALITY NOW
                 </a>
             </div>
         </section>
 
-        <!-- 2. Mission Section - Confident and Assertive -->
-        <section id="mission" class="py-16 md:py-24 bg-slate-900/70 border-t border-b border-sgp-primary/20">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div>
+        <!-- NEW IMAGE BANNER SECTION --><section id="visual-banner" 
+            class="relative h-[400px] md:h-[600px] overflow-hidden bg-cover bg-center border-t border-b border-sgp-primary/40" 
+            style="background-image: url('https://i.postimg.cc/sBmzpZNC/Gemini-Generated-Image-7ca2i17ca2i17ca2.jpg'); background-attachment: fixed; ">
+            <!-- The image will be displayed here as a background with no overlay or text --></section>
+        
+        <!-- 2. Mission Section - Confident and Assertive --><section id="mission" class="py-16 md:py-24 bg-slate-900/70 border-b border-sgp-primary/20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center px-6">
+                <div class="w-full md:w-1/2">
                     <span class="text-sm font-semibold text-sgp-primary uppercase tracking-widest">Our Unfiltered Mandate</span>
                     <h3 class="text-3xl md:text-5xl font-extrabold mt-3 mb-6 leading-tight">
                         WE AREN'T ASKING FOR RIGHTS. WE'RE TAKING THEM BACK.
                     </h3>
                 </div>
-                <div>
+                <div class="w-full md:w-1/2">
                     <p class="text-lg text-slate-300 mb-4">
-                        The time for polite petitions is over. SGP is an army of legal experts, medical professionals, and policy analysts dedicated to **dismantling systemic oppression** from the courtroom to the boardroom. We don't negotiate with injustice; we defeat it.
+                        The time for polite petitions is over. SGP is an army of legal experts, medical professionals, and policy analysts dedicated to <span class="font-bold">dismantling systemic oppression</span> from the courtroom to the boardroom. We don't negotiate with injustice; we defeat it.
                     </p>
                     <p class="text-lg font-bold gradient-text">
                         JOIN THE PROFESSIONALS WHO REFUSE TO LOSE.
@@ -120,46 +119,87 @@
             </div>
         </section>
 
-        <!-- 3. Impact/Numbers Section - Vivid and Dramatic -->
-        <section id="impact" class="py-16 md:py-24">
+        <!-- 3. Immediate Political Action Section - Urgent Clickbait --><section id="political-action" class="py-16 md:py-20 text-center bg-pride-red/10 border-t-4 border-b-4 border-pride-red shadow-xl">
+            <div class="max-w-5xl mx-auto px-6">
+                <h3 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight uppercase text-red-400">
+                    URGENT ALERT: <span class="text-white">YOUR VOTE IS UNDER ATTACK.</span>
+                </h3>
+                <p class="text-xl md:text-2xl text-slate-300 mb-8 font-medium">
+                    A critical bill is being debated <span class="font-bold">RIGHT NOW.</span> Stop scrolling. Stop waiting. Click below to see the bill, find your local representative, and send an automated opposition letter in 60 seconds.
+                </p>
+                <!-- Clickbait button for external action --><a href="https://www.usa.gov/state-election-office" target="_blank" class="inline-block text-lg md:text-xl font-bold px-12 py-4 rounded-full bg-pride-red text-sgp-dark uppercase tracking-wider shadow-red-500/50 shadow-xl hover:bg-red-600 transition duration-300">
+                    STOP THE BILL BEFORE IT'S TOO LATE!
+                </a>
+            </div>
+        </section>
+        
+        <!-- 4. Impact/Numbers Section - Vivid and Dramatic --><section id="impact" class="py-16 md:py-24">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-center text-4xl md:text-6xl font-black mb-12 uppercase gradient-text">
                     THE RESULTS AREN'T OPTIONAL.
                 </h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     
-                    <!-- Stat Card 1 -->
-                    <div class="stat-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
+                    <!-- Stat Card 1 --><div class="stat-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
                         <p class="text-6xl font-extrabold text-pride-red mb-3">400+</p>
                         <h4 class="text-xl font-bold mb-2">BILLS DESTROYED</h4>
-                        <p class="text-slate-400">Anti-gender bills filed in the last cycle. Our legal team defeated 92% of them before they reached a vote. **We stop hate in its tracks.**</p>
+                        <p class="text-slate-400">Anti-gender bills filed in the last cycle. Our legal team defeated 92% of them before they reached a vote. <span class="font-bold">We stop hate in its tracks.</span></p>
                     </div>
 
-                    <!-- Stat Card 2 -->
-                    <div class="stat-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
+                    <!-- Stat Card 2 --><div class="stat-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
                         <p class="text-6xl font-extrabold text-pride-yellow mb-3">20,000+</p>
                         <h4 class="text-xl font-bold mb-2">PROFESSIONALS UNIFIED</h4>
-                        <p class="text-slate-400">The largest, most connected network of advocates, clinicians, and researchers ever assembled. **Your expertise is our weapon.**</p>
+                        <p class="text-slate-400">The largest, most connected network of advocates, clinicians, and researchers ever assembled. <span class="font-bold">Your expertise is our weapon.</span></p>
                     </div>
 
-                    <!-- Stat Card 3 -->
-                    <div class="stat-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
+                    <!-- Stat Card 3 --><div class="stat-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
                         <p class="text-6xl font-extrabold text-pride-blue mb-3">$1.5M</p>
                         <h4 class="text-xl font-bold mb-2">EMERGENCY AID FUNDED</h4>
-                        <p class="text-slate-400">Directly supporting legal aid and relocation for families under attack. **Immediate action. Zero compromise.**</p>
+                        <p class="text-slate-400">Directly supporting legal aid and relocation for families under attack. <span class="font-bold">Immediate action. Zero compromise.</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Action Section - Direct Call to Action -->
-        <section id="join" class="py-16 md:py-24 text-center bg-sgp-primary/10 border-t border-b border-sgp-primary/40">
+        <!-- 5. Contact/Signup Form Section --><section id="contact-signup" class="py-16 md:py-24 bg-slate-900/50 border-t border-sgp-primary/40">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-center text-4xl md:text-6xl font-black mb-6 leading-tight uppercase gradient-text">
+                    JOIN THE INNER CIRCLE.
+                </h2>
+                <p class="text-center text-xl md:text-2xl text-slate-300 mb-10">
+                    Get <span class="font-bold">immediate, actionable intelligence</span> on gender policy, urgent calls to action, and exclusive access to our network updates.
+                </p>
+
+                <!-- Signup Form --><form class="space-y-6 p-8 bg-slate-800/50 rounded-xl shadow-2xl border border-sgp-primary/30">
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Full Name" required 
+                               class="w-full px-5 py-3 rounded-lg bg-sgp-dark border border-slate-700 text-white placeholder-slate-500 focus:border-sgp-primary focus:ring-sgp-primary transition duration-300">
+                        
+                        <input type="email" placeholder="Your Top Secret Email Address" required 
+                               class="w-full px-5 py-3 rounded-lg bg-sgp-dark border border-slate-700 text-white placeholder-slate-500 focus:border-sgp-primary focus:ring-sgp-primary transition duration-300">
+                    </div>
+                    
+                    <textarea placeholder="Tell us how you want to fight (e.g., 'I am a legal expert' or 'I want to donate monthly')" rows="3"
+                              class="w-full px-5 py-3 rounded-lg bg-sgp-dark border border-slate-700 text-white placeholder-slate-500 focus:border-sgp-primary focus:ring-sgp-primary transition duration-300"></textarea>
+
+                    <button type="submit" class="cta-button w-full text-xl font-bold px-10 py-4 rounded-full bg-pride-green text-sgp-dark uppercase tracking-wider hover:bg-pride-green/80 transition duration-300">
+                        ENLIST ME. SEND ME THE INTEL.
+                    </button>
+                    <p class="text-center text-sm text-slate-400 mt-4">
+                        We respect your privacy. No spam. Only power.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- 6. Final Action Section - Direct Call to Action --><section id="join" class="py-16 md:py-24 text-center bg-sgp-primary/10 border-t border-b border-sgp-primary/40">
             <div class="max-w-3xl mx-auto px-6">
                 <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white uppercase">
                     ARE YOU READY TO BE THE FIRE?
                 </h2>
                 <p class="text-xl md:text-2xl text-slate-300 mb-10">
-                    The status quo is a threat. It's time to exchange fear for action. Donate, volunteer, or join our professional ranks. **The revolution needs your power.**
+                    The status quo is a threat. It's time to exchange fear for action. Donate, volunteer, or join our professional ranks. <span class="font-bold">The revolution needs your power.</span>
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="act-now.html" class="cta-button inline-block text-lg font-bold px-10 py-4 rounded-full bg-sgp-primary text-sgp-dark uppercase tracking-wider">
@@ -173,8 +213,7 @@
         </section>
     </main>
 
-    <!-- Footer - Simple, but contains the copyright and social links -->
-    <footer class="bg-sgp-dark p-8 border-t border-slate-700">
+    <!-- Footer - Simple, but contains the copyright and social links --><footer class="bg-sgp-dark p-8 border-t border-slate-700">
         <div class="max-w-7xl mx-auto text-center text-sm text-slate-400">
             <p>&copy; 2025 Society of Gender Professionals. Unapologetically Fighting for Equality. </p>
             <div class="mt-4 space-x-4">
@@ -185,8 +224,7 @@
         </div>
     </footer>
 
-    <!-- Simple JS for a subtle scroll indicator (extra eye-catching feature) -->
-    <script>
+    <!-- Simple JS for a subtle scroll indicator (extra eye-catching feature) --><script>
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.body;
             // Add a small scroll indicator at the top for visual flair
