@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act Now | SGP: Fund the Revolution</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for the "Inter" font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'sgp-dark': '#0f172a', // Slate 900
+                        'sgp-primary': '#a855f7', // Violet 500
+                        'pride-red': '#ef4444',
+                        'pride-orange': '#f97316',
+                        'pride-yellow': '#eab308',
+                        'pride-green': '#22c55e',
+                        'pride-blue': '#3b82f6',
+                        'pride-violet': '#8b5cf6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom gradient for a vivid, eye-catching effect */
+        .gradient-text {
+            background-image: linear-gradient(to right, 
+                var(--tw-sgp-primary), var(--tw-pride-blue), var(--tw-pride-violet));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5); /* Primary glow */
+        }
+        
+        .cta-button:hover {
+            /* Rainbow background on hover */
+            background-image: linear-gradient(45deg, 
+                #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6);
+            color: #1f2937; /* Dark text on rainbow */
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* White glow for emphasis */
+            transform: scale(1.05);
+        }
+
+        /* Specific style for the hyper-clickbait donation button */
+        .donate-button-glow {
+            position: relative;
+            z-index: 10;
+            background-image: linear-gradient(to right, 
+                var(--tw-pride-red), var(--tw-pride-orange), var(--tw-pride-yellow), var(--tw-pride-green), var(--tw-pride-blue), var(--tw-pride-violet));
+            color: #0f172a;
+            font-size: 1.5rem;
+            padding: 1rem 3rem;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            /* Pulse animation */
+            animation: pulse-glow 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(255, 0, 0, 0.7), 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(168, 85, 247, 1), 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        .action-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .action-card:hover {
+            border-color: #a855f7;
+            background-color: #1e293b;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-sgp-dark text-white font-sans min-h-screen antialiased">
+
+    <!-- Navigation Bar (Consistent across all pages) -->
+    <header class="sticky top-0 z-10 bg-sgp-dark/95 backdrop-blur-sm p-4 border-b border-sgp-dark/50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black gradient-text">SGP.</a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="index.html" class="hover:text-sgp-primary transition duration-300">HOME</a>
+                <a href="about.html" class="hover:text-sgp-primary transition duration-300">ABOUT</a>
+                <a href="#" class="text-sgp-primary transition duration-300 border-b-2 border-sgp-primary">ACT NOW</a>
+            </nav>
+            <button class="md:hidden text-2xl hover:text-sgp-primary">
+                <!-- Hamburger Icon SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Act Now Hero Section - Clickbait and Urgent -->
+        <section id="act-now-hero" class="relative text-center py-20 md:py-32 overflow-hidden bg-pride-red/10 border-b-4 border-pride-red">
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6 leading-tight uppercase text-red-400">
+                    THE WINDOW IS CLOSING. <span class="text-white">ACTIVATE POWER.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-slate-300 mb-10 font-medium max-w-2xl mx-auto">
+                    Every second you hesitate, the opposition gains ground. We need resources NOW to fund emergency legal battles and protect lives.
+                </p>
+                <!-- Hyper Clickbait Donation Button -->
+                <a href="#" class="donate-button-glow inline-block font-black rounded-full uppercase tracking-widest transition duration-300">
+                    DONATE $50 TO SAVE A LIFE TODAY
+                </a>
+                <p class="text-sm text-slate-400 mt-4 italic">
+                    <span class="font-bold">100% of your funds</span> go directly to action and defense. No overhead. No excuses.
+                </p>
+            </div>
+        </section>
+
+        <!-- Donation Impact Section -->
+        <section id="impact" class="py-16 md:py-24 bg-slate-900/70 border-b border-sgp-primary/20">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <span class="text-sm font-semibold text-sgp-primary uppercase tracking-widest">IMMEDIATE IMPACT</span>
+                <h3 class="text-3xl md:text-5xl font-extrabold mt-3 mb-12 leading-tight">
+                    WHERE YOUR <span class="gradient-text">FUNDS</span> ARE DEPLOYED.
+                </h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Impact Card 1 -->
+                    <div class="p-6 rounded-xl bg-slate-800/50 shadow-2xl border border-sgp-primary/30">
+                        <p class="text-5xl font-extrabold text-pride-blue mb-3">L.</p>
+                        <h4 class="text-xl font-bold mb-2">LEGAL DEFENSE FUND</h4>
+                        <p class="text-slate-400">Funding <b>emergency court injunctions</b> and covering costs for pro-bono lawyers fighting anti-gender legislation across 30 states. Your money is the gavel.</p>
+                    </div>
+
+                    <!-- Impact Card 2 -->
+                    <div class="p-6 rounded-xl bg-slate-800/50 shadow-2xl border border-sgp-primary/30">
+                        <p class="text-5xl font-extrabold text-pride-red mb-3">R.</p>
+                        <h4 class="text-xl font-bold mb-2">RAPID RESPONSE RELOCATION</h4>
+                        <p class="text-slate-400">Immediate, confidential aid for trans youth and families forced to flee hostile states. <span class="font-bold">A safe house funded by you.</span></p>
+                    </div>
+
+                    <!-- Impact Card 3 -->
+                    <div class="p-6 rounded-xl bg-slate-800/50 shadow-2xl border border-sgp-primary/30">
+                        <p class="text-5xl font-extrabold text-pride-green mb-3">M.</p>
+                        <h4 class="text-xl font-bold mb-2">MEDIA COUNTER-ATTACK</h4>
+                        <p class="text-slate-400">Financing nationwide media campaigns to <b>counter misinformation</b> and shift public opinion before the next election cycle begins. Truth is power.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Section - The second, equally critical action -->
+        <section id="volunteer" class="py-16 md:py-24">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <span class="text-sm font-semibold text-sgp-primary uppercase tracking-widest">MORE THAN MONEY</span>
+                <h3 class="text-3xl md:text-5xl font-extrabold mt-3 mb-12 leading-tight">
+                    VOLUNTEER YOUR <span class="gradient-text">EXPERTISE.</span> JOIN THE FRONT LINE.
+                </h3>
+                
+                <p class="text-xl text-slate-300 mb-10">
+                    We don't need coffee runners. We need professionals. Deploy your specialized skills where they matter most and join our revolutionary task forces.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Volunteer Card 1 -->
+                    <div class="action-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
+                        <h4 class="text-2xl font-bold mb-3 text-pride-blue">LEGAL TASK FORCE</h4>
+                        <p class="text-slate-400 mb-4">
+                            Are you an attorney, paralegal, or law student? We need you to track legislation, prepare filings, and assist with pro bono defense work. <span class="font-bold">This is direct combat.</span>
+                        </p>
+                        <a href="#" class="text-sgp-primary font-semibold hover:underline">Apply Your Legal Edge →</a>
+                    </div>
+
+                    <!-- Volunteer Card 2 -->
+                    <div class="action-card p-8 rounded-xl bg-slate-800/50 shadow-2xl">
+                        <h4 class="text-2xl font-bold mb-3 text-pride-green">RESEARCH & DATA ANALYTICS</h4>
+                        <p class="text-slate-400 mb-4">
+                            We fight with facts. Join our team of researchers to produce applied gender data, counter false narratives, and write the reports that policymakers cannot ignore. <span class="font-bold">Data is the new shield.</span>
+                        </p>
+                        <a href="#" class="text-sgp-primary font-semibold hover:underline">Enlist Your Research Skills →</a>
+                    </div>
+                </div>
+                
+                <div class="mt-12">
+                    <a href="about.html" class="inline-block text-lg font-bold px-8 py-3 rounded-full bg-transparent border-2 border-white text-white uppercase tracking-wider hover:bg-white hover:text-sgp-dark transition duration-300">
+                        SEE ALL VOLUNTEER ROLES
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monthly Donation Callout - Sustained Power -->
+        <section id="monthly-callout" class="py-16 md:py-24 text-center bg-sgp-primary/10 border-t border-b border-sgp-primary/40">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white uppercase">
+                    COMMIT TO THE <span class="gradient-text">LONG WAR.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-slate-300 mb-10">
+                    The opposition never quits. Monthly sustaining members provide the stable funds we need to keep our legal and advocacy teams operational 24/7. <span class="font-bold">Be our bedrock.</span>
+                </p>
+                <a href="#" class="cta-button inline-block text-lg font-bold px-10 py-4 rounded-full bg-sgp-primary text-sgp-dark uppercase tracking-wider">
+                    BECOME A SUSTAINING MEMBER
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="bg-sgp-dark p-8 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto text-center text-sm text-slate-400">
+            <p>&copy; 2025 Society of Gender Professionals. Unapologetically Fighting for Equality. </p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-sgp-primary">Privacy Policy</a>
+                <a href="#" class="hover:text-sgp-primary">Contact the Legal Team</a>
+                <a href="#" class="hover:text-sgp-primary">Media Inquiries</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
