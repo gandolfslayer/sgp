@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act Now: Donate or Join the Fight | SGP</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for the "Inter" font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'sgp-dark': '#0f172a', // Slate 900
+                        'sgp-primary': '#a855f7', // Violet 500
+                        'pride-red': '#ef4444',
+                        'pride-orange': '#f97316',
+                        'pride-yellow': '#eab308',
+                        'pride-green': '#22c55e',
+                        'pride-blue': '#3b82f6',
+                        'pride-violet': '#8b5cf6',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(168, 85, 247, 0.5), 0 0 5px rgba(255, 255, 255, 0.7)' },
+                            '50%': { boxShadow: '0 0 35px rgba(168, 85, 247, 1), 0 0 15px rgba(255, 255, 255, 1)' },
+                        }
+                    },
+                    animation: {
+                        pulseGlow: 'pulseGlow 2s infinite ease-in-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom gradient for a vivid, eye-catching effect */
+        .gradient-text {
+            background-image: linear-gradient(to right, 
+                var(--tw-sgp-primary), var(--tw-pride-blue), var(--tw-pride-violet));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5); /* Primary glow */
+        }
+        
+        .cta-button:hover {
+            /* Rainbow background on hover */
+            background-image: linear-gradient(45deg, 
+                #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6);
+            color: #1f2937; /* Dark text on rainbow */
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* White glow for emphasis */
+            transform: scale(1.05);
+        }
+
+        .donation-card, .volunteer-card {
+            border: 3px solid transparent;
+            border-image: linear-gradient(45deg, #a855f7, #ef4444, #f97316);
+            border-image-slice: 1;
+            transition: transform 0.4s ease-in-out;
+        }
+        .donation-card:hover, .volunteer-card:hover {
+            transform: scale(1.03);
+            background-color: rgba(168, 85, 247, 0.15); /* Subtle primary overlay */
+        }
+    </style>
+</head>
+<body class="bg-sgp-dark text-white font-sans min-h-screen antialiased">
+
+    <!-- Navigation Bar (Same as previous files) -->
+    <header class="sticky top-0 z-10 bg-sgp-dark/95 backdrop-blur-sm p-4 border-b border-sgp-dark/50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black gradient-text">SGP.</a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="index.html" class="hover:text-sgp-primary transition duration-300">HOME</a>
+                <a href="about.html" class="hover:text-sgp-primary transition duration-300">ABOUT</a>
+                <a href="#" class="text-sgp-primary transition duration-300 border-b-2 border-sgp-primary">ACT NOW</a>
+            </nav>
+            <button class="md:hidden text-2xl hover:text-sgp-primary">
+                <!-- Hamburger Icon SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Action Hero Section - Maximum Urgency -->
+        <section id="action-hero" class="relative text-center py-20 md:py-32 overflow-hidden bg-slate-900/70 border-b border-sgp-primary/20">
+            <div class="max-w-5xl mx-auto px-6 relative z-10">
+                <h2 class="text-4xl sm:text-7xl md:text-8xl font-black mb-4 leading-none uppercase">
+                    THE WINDOW IS <span class="gradient-text">CLOSING.</span>
+                </h2>
+                <h3 class="text-2xl md:text-4xl text-pride-red font-extrabold mb-8">
+                    EVERY SECOND YOU WAIT, THE FIGHT GETS HARDER.
+                </h3>
+                <p class="text-xl md:text-2xl text-slate-300 font-medium max-w-4xl mx-auto mb-10">
+                    We need experts. We need funds. We need a unified front. Choose your role in the revolution—**this is your defining moment.**
+                </p>
+            </div>
+        </section>
+
+        <!-- Dual Action Section: Donate vs. Volunteer -->
+        <section id="options" class="py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
+                
+                <!-- Donation Card: Financial Weaponry -->
+                <div class="donation-card p-8 md:p-12 rounded-2xl bg-slate-800/50 shadow-2xl">
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-4 text-pride-yellow uppercase">
+                        FUND THE WAR CHEST.
+                    </h3>
+                    <p class="text-lg text-slate-300 mb-6 border-l-4 border-pride-yellow pl-4">
+                        A donation isn't charity—it's **AMMUNITION.** You directly finance legal defense funds, emergency relocation for targets, and the high-level policy research that **dismantles hate legislation.**
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-4 bg-sgp-dark/50 p-3 rounded-lg">
+                            <span class="text-pride-red text-xl font-black">→</span>
+                            <p class="text-white font-bold">Your $50: Funds 1 Hour of Expert Legal Consultation.</p>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-sgp-dark/50 p-3 rounded-lg">
+                            <span class="text-pride-red text-xl font-black">→</span>
+                            <p class="text-white font-bold">Your $250: Secures Key Research Data to Challenge a Ban.</p>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-sgp-dark/50 p-3 rounded-lg">
+                            <span class="text-pride-red text-xl font-black">→</span>
+                            <p class="text-white font-bold">Your $1,000: Provides Emergency Safety to a Family in Crisis.</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="cta-button inline-block w-full text-xl font-black px-12 py-5 rounded-full bg-sgp-primary text-sgp-dark uppercase tracking-widest animate-pulseGlow">
+                        DONATE $100 AND CHANGE THE TIDE
+                    </a>
+                </div>
+
+                <!-- Volunteer Card: Power & Expertise -->
+                <div class="volunteer-card p-8 md:p-12 rounded-2xl bg-slate-800/50 shadow-2xl">
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-4 text-pride-blue uppercase">
+                        JOIN THE <span class="gradient-text">INNER CIRCLE.</span>
+                    </h3>
+                    <p class="text-lg text-slate-300 mb-6 border-l-4 border-pride-blue pl-4">
+                        Don't just watch the fight—**lead it.** We need your professional expertise: legal knowledge, statistical analysis, policy drafting, digital organizing, and media response. This is high-impact work with a global network.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <h4 class="text-xl font-bold text-white mb-2">We Need Operatives in These Key Fields:</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-3 py-1 bg-pride-green/20 text-pride-green rounded-full text-sm font-semibold">Legal Policy</span>
+                            <span class="px-3 py-1 bg-pride-violet/20 text-pride-violet rounded-full text-sm font-semibold">Data Science</span>
+                            <span class="px-3 py-1 bg-pride-orange/20 text-pride-orange rounded-full text-sm font-semibold">Feminist Research</span>
+                            <span class="px-3 py-1 bg-pride-yellow/20 text-pride-yellow rounded-full text-sm font-semibold">Media Strategy</span>
+                            <span class="px-3 py-1 bg-pride-red/20 text-pride-red rounded-full text-sm font-semibold">Program Design</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="inline-block w-full text-xl font-black px-12 py-5 rounded-full bg-white text-sgp-dark uppercase tracking-widest shadow-lg hover:bg-slate-300 transition duration-300">
+                        APPLY TO BE AN SGP OPERATIVE
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final Inescapable Call to Action -->
+        <section id="final-cta" class="py-16 md:py-24 text-center bg-sgp-dark/50 border-t border-sgp-primary/40">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight uppercase">
+                    SILENCE IS <span class="gradient-text">COMPLICITY.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-slate-300 mb-10">
+                    If you believe in a gender-just world, your action is non-negotiable. Don't wait for permission. **The fight is now.**
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <a href="#" class="cta-button inline-block text-lg font-bold px-10 py-4 rounded-full bg-sgp-primary text-sgp-dark uppercase tracking-wider">
+                        $50 GUARANTEES IMPACT
+                    </a>
+                    <a href="#" class="inline-block text-lg font-bold px-10 py-4 rounded-full bg-transparent border-2 border-white text-white uppercase tracking-wider hover:bg-white hover:text-sgp-dark transition duration-300">
+                        OFFER YOUR SKILLS
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as previous files) -->
+    <footer class="bg-sgp-dark p-8 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto text-center text-sm text-slate-400">
+            <p>&copy; 2025 Society of Gender Professionals. Unapologetically Fighting for Equality. </p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-sgp-primary">Privacy Policy</a>
+                <a href="#" class="hover:text-sgp-primary">Contact the Legal Team</a>
+                <a href="#" class="hover:text-sgp-primary">Media Inquiries</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
